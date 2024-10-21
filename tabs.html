@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple tabs component using HTML,CSS,JavaScript and DOM Manipulation to showcase dynamic content display">
+  <meta name="keywords" content="HTML,CSS, JavaScript,DOM Manipulation, Tabs,Accessiblity, SEO">
+  <meta name="author" content="Efuetanu Collins Avwerosuo">
+  <title>Tabs</title>
+  <link rel="stylesheet" href="tabs.css">
+</head>
+<body>
+  <nav aria-label="Tabbed container">
+    <ul class="tabs" role="tablist">
+      <li role="presentation">
+        <button role="tab" aria-selected="true" aria-controls="tab-1" id="tab-1-btn" class="tab-link active" data-tab="tab-1" tabindex="0">First Tab</button>
+      </li>
+      <li role="presentation">
+        <button role="tab" aria-selected="false" aria-controls="tab-2" id="tab-2-btn" class="tab-link" data-tab="tab-2" tabindex="-1">Second Tab</button>
+      </li>
+      <li>
+        <button role="tab" aria-selected="false" aria-controls="tab-3" id="tab-3-btn" class="tab-link" data-tab="tab-3" tabindex="-1">Third Tab</button>
+      </li>
+      <li>
+        <button role="tab" aria-selected="false" aria-controls="tab-4" id="tab-4-btn" class="tab-link" data-tab="tab-4" tabindex="-1">Fourth Tab</button>
+      </li>
+
+
+    </ul>
+  </nav>
+
+  <section class="content">
+    <div id="tab-1" class="currenttab active" aria-labelledby="tab-1-btn" role="tabpanel" >
+      <p>First Tab Content to be displayed here.</p>
+    </div>
+    <div id="tab-2" class="currenttab" aria-labelledby="tab-2-btn" role="tabpanel" hidden>
+      <p>Second Tab Content to be displayed here.</p>
+    </div>
+    <div id="tab-3" class="currenttab" aria-labelledby="tab-3-btn" role="tabpanel" hidden>
+      <p>Third Tab Content to be displayed here.</p>
+    </div>
+
+    <div id="tab-4" class="currenttab" aria-labelledby="tab-4-btn" role="tabpanel" hidden>
+      <p>Fourth Tab Content to be displayed here.</p>
+    </div>
+
+
+  </section>
+
+  <script src="scripts.js"></script>
+
+</body>
+</html>
