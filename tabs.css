@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Basic Reset for Box Sizing */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Styling for the body */
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 30px;
+}
+
+
+
+h2 {
+  background-color: #000;
+  height:100px;
+  font-size: medium;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #000;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/*Tabs container styling */
+.tabs-container {
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*tabs styling*/
+ul.tabs {
+  list-style: none;
+  display: flex;
+  border-bottom: 2px solid #eaeaea;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  padding-left: 0;
+
+}
+
+ul.tabs li {
+  margin-right: 20px;
+}
+
+/*Tab link button styling*/
+.tab-link {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #bbb;
+  position: relative;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+
+}
+
+/* Active tab */
+.tab-link.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.tab-link:hover {
+  color: #666;
+}
+
+
+.tab-link.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  bottom: -5px;
+  left:0;
+  border-radius: 1px;
+}
+
+.content {
+  width:100%;
+  color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Hidden tab content */
+.currenttab[hidden] {
+  display: none;
+}
+
+/*Responsive design */
+@media (max-width: 768px) {
+  .tabs-container {
+    width: 100%;
+  }
+
+  .tab-link {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
